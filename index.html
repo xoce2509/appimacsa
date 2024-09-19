@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script language = "JavaScript">
+        history.forward()
+    </script>
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <title>Index</title>
+</head>
+<body>
+    <script language = "JavaScript">
+        function go(){
+            if(document.form.password.value=='admin' && document.form.login.value=='admin'){
+                document.form.submit();
+            }
+            else{
+                alert("Please enter correct Username and Password");
+            }
+        }
+    </script>
+    <main>
+        <div id="login-1">
+            <form name="form" action="/menu.html">
+                <h1>Login</h1>
+                <div class="input-user">
+                    <input type="text" name="login" id="username" placeholder="Username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-password">
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <i class="bx bxs-lock-alt"></i>
+                </div>
+                <button type="button" value="Acceder" onclick="go()" id="btn-login">Login</button>
+                <br>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

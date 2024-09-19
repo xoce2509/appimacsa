@@ -1,0 +1,725 @@
+/* Configuracion General*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    background: url(/assets/img/fondorenta.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    min-height: 100vh;
+}
+/* Estilo equipo pesado */
+.bloque{
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+.bloque button{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+.bloque button:hover{
+    background-color: #ddd;
+}
+.bloque button.active{
+    background-color: #ccc;
+}
+.contenido{
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+/* Estilo Flota de Vehiculos */
+.bloque1{
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+.bloque1 button{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+.bloque1 button:hover{
+    background-color: #ddd;
+}
+.bloque1 button.active{
+    background-color: #ccc;
+}
+.ctd1{
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+/* Estilo de Herramienta Pequeñas */
+.bloque2{
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1; 
+}
+.bloque2 button{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+.bloque2 button:hover{
+    background-color: #ddd;
+}
+.bloque2 button.active{
+    background-color: #ccc;
+}
+.ctd2{
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+/* Estilo Staff */
+.bloque3{
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+.bloque3 button{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+.bloque3 button:hover{
+    background-color: #ddd;
+}
+.bloque3 button.active{
+    background-color: #ccc;
+}
+.ctd3{
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none; 
+}
+/* Estilo Suppliers */
+.bloque4{
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+.bloque4 button{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+.bloque4 button:hover{
+    background-color: #ddd;
+}
+.bloque4 button.active{
+    background-color: #ccc;
+}
+.ctd4{
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+/* Estilo Customers */
+.bloque5{
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+.bloque5 button{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+.bloque5 button:hover{
+    background-color: #ddd;
+}
+.bloque5 button.active{
+    background-color: #ccc;
+}
+.ctd5{
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: transparent;
+    color: #888;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 25px 16px;
+    font-size: 16px;
+    width: 180px;
+    text-align: left;
+    transition: all 0.6s ease-in-out;
+  }
+
+  .tablink:hover {
+    background-color: #facc00;
+    color: #000;
+  }
+
+
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    color: black;
+    display: none;
+    padding: 10px 10px;
+    height: 100%;
+    margin-top: 12px;
+    border: 0.5px solid #999;
+    border-radius: 6px;
+    opacity: 0.97;
+  }
+
+  #Dashboard {background-color: #dee2e8;}
+  #Equipment {background-color: #dee2e8;}
+  #Vehicles {background-color: #dee2e8;}
+  #Tools {background-color: #dee2e8;}
+  #SmallTools {background-color: #dee2e8;}
+  #Staff {background-color: #dee2e8;}
+  #Suppliers {background-color: #dee2e8;}
+  #Customers {background-color: #dee2e8;}
+
+
+.mod{
+    display: flex;
+
+}
+
+.mod1{
+    background: #000;
+}
+
+.btn{
+    display: block;
+    background-color: black;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 13px 10px;
+    font-size: 16px;
+    width: 180px;
+    text-align: left;
+    transition: all 0.6s ease-in-out;
+}
+.btn:hover{
+    background-color: #555;
+    color: #fcc015;
+}
+
+.ctnido{
+    color: #000;
+    display: none;
+    padding: 15px 10px;
+    height: 528px;
+    width: 750px;
+    margin-top: 0px;
+    border: 0.5px solid #777;
+    border-radius: 0px;
+    opacity: 0.97;
+}
+#Backhoes{background-color: transparent;}
+#Brooms{background-color: transparent;}
+#Dozers{background-color: transparent;}
+#Excavators{background-color: transparent;}
+#Lifts{background-color: transparent;}
+#Forklifts{background-color: transparent;}
+#Graders{background-color: transparent;}
+#Loaders{background-color: transparent;}
+#Pavers{background-color: transparent;}
+#Rollers{background-color: transparent;}
+#Skidsteers{background-color: transparent;}
+#Misc{background-color: transparent;}
+
+.reg{
+    display: flex;
+}
+.reg1{
+    background: #000;
+}
+.btnreg{
+    display: block;
+    background-color: black;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 13px 10px;
+    font-size: 16px;
+    width: 180px;
+    text-align: left;
+    transition: all 0.6s ease-in-out;
+}
+.btnreg:hover{
+    background-color: #555;
+    color: #fcc015;
+}
+.regctn{
+    color: #000;
+    display: none;
+    padding: 15px 10px;
+    height: 528px;
+    width: 700px;
+    margin-top: 0px;
+    border: 0.5px solid #777;
+    border-radius: 0px;
+    opacity: 0.97;
+}
+#Dumptrucks{background-color: transparent;}
+#Fueltrucks{background-color: transparent;}
+#Lowboys{background-color: transparent;}
+#Maintenancetrucks{background-color: transparent;}
+#Pickups{background-color: transparent;}
+#Vans{background-color: transparent;}
+#Suvs{background-color: transparent;}
+#Trailers{background-color: transparent;}
+#Watertrucks{background-color: transparent;}
+#Welder{background-color: transparent;}
+
+.rgs{
+    display: flex;
+}
+.rgs1{
+    background: #000;
+}
+.btntl{
+    display: block;
+    background-color: black;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 13px 10px;
+    font-size: 16px;
+    width: 180px;
+    text-align: left;
+    transition: all 0.6s ease-in-out;
+}
+.btntl:hover{
+    background-color: #555;
+    color: #fcc015;
+}
+.rgctd{
+    color: #000;
+    display: none;
+    padding: 15px 10px;
+    height: 528px;
+    width: 700px;
+    margin-top: 0px;
+    border: 0.5px solid #777;
+    border-radius: 0px;
+    opacity: 0.97;
+}
+#Compressors{background-color: transparent;}
+#Compactors{background-color: transparent;}
+#Drills{background-color: transparent;}
+#Generator{background-color: transparent;}
+#Hammers{background-color: transparent;}
+#Misctools{background-color: transparent;}
+#Pumps{background-color: transparent;}
+#Pressurewashers{background-color: transparent;}
+#Saws{background-color: transparent;}
+#Surveyingtools{background-color: transparent;}
+/*Contenedor Principal*/
+
+.grid-container > *{
+    border-radius: 2px;
+    padding: 8px;
+}
+
+
+.header{
+    grid-area: header;
+    background: #facc00;
+    .topnav{
+        overflow: hidden;
+    }
+    .topnav a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      .topnav input[type=text] {
+        float: right;
+        padding: 6px;
+        border: none;
+        margin-top: 8px;
+        margin-right: 16px;
+        font-size: 17px;
+      }
+}
+
+.navbar{
+    grid-area: navbar;
+    background: rgb(40,40,40);
+    background: linear-gradient(0deg, rgba(40,40,40,1) 0%, rgba(26,26,26,1) 36%, rgba(0,0,0,1) 100%);
+    opacity: 0.98;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background: rgb(40,40,40);
+    background: linear-gradient(0deg, rgba(40,40,40,1) 0%, rgba(26,26,26,1) 36%, rgba(0,0,0,1) 100%);
+    opacity: 0.98;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    padding: 0 1.7rem;
+
+    .logo{
+        color: #facc00;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid #777;
+        height: 60px;
+    }
+ }
+
+.main{
+    grid-area: main;
+}
+
+.settingheavyequipment{
+    width: 100%;
+    height: 500px;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+}
+.setting1{
+    margin: 5px;
+
+    .set1{
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+        margin: 8px;
+
+        .hq1{
+            background: #b2cfb5;
+            color: #000000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2.3px solid #009879;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+            width: 25%;
+            height: 170px;
+            padding: 10px;
+            margin: 5px;
+        }
+        .ttl1{
+            margin: 10px;
+        }
+        .hq2{
+            background: rgb(183, 216, 231);
+            color: #000000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgb(0, 110, 255);
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            width: 25%;
+            height: 170px;
+            padding: 10px;
+            margin: 5px;
+        }
+        .hq3{
+            background: rgb(255, 220, 170);
+            color: #000000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgb(255, 148, 7);
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            width: 25%;
+            height: 170px;
+            padding: 10px;
+            margin: 5px;
+        }
+        .hq4{
+            background: rgb(212, 212, 212);
+            color: #000000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #000000;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            width: 25%;
+            height: 170px;
+            padding: 10px;
+            margin: 5px;
+        }
+    }
+}
+.formset1{
+    align-items: center;
+}
+
+.hqinput1{
+    height: 30px;
+    width: 180px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+.hqinput2{
+    height: 30px;
+    width: 180px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+.hqinput3{
+    height: 30px;
+    width: 180px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+.hqinput4{
+    height: 30px;
+    width: 180px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.hqinput1::placeholder{
+    text-align: center;
+}
+.hqinput2::placeholder{
+    text-align: center;
+}
+.hqinput3::placeholder{
+    text-align: center;
+}
+.hqinput4::placeholder{
+    text-align: center;
+}
+
+.btnset1{
+    height: 30px;
+    width: 50px;
+}
+.btnset2{
+    height: 30px;
+    width: 50px;
+}
+.btnset3{
+    height: 30px;
+    width: 50px;
+}
+.btnset4{
+    height: 30px;
+    width: 50px;
+}
+
+.setting2{
+    margin: 5px;
+}
+.set2{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin: 8px;
+}
+/*formato de tabla de datos*/
+.hq5{
+     background: rgb(253, 253, 253);
+     border: 1px solid #999;
+     opacity: 1;
+     color: #444;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+
+     border-radius: 8px;
+     width: 25%;
+     height: 280px;
+     padding: 10px;
+     margin: 5px;
+     box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+.lb5{
+    border-bottom: 2px solid #4e4e4e;
+}
+
+table{
+	border-collapse: collapse;
+    margin: 15px 0px;
+    font-size: 1em;
+    font-family: sans-serif;
+    min-width: 250px;
+    width: 270px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+table thead tr{
+	background-color: #4e4e4e;
+    color: #ffffff;
+    text-align: middle;
+}
+table th, table td{
+	padding: 12px 15px;
+}
+table tbody tr{
+	border-bottom: 1px solid #dddddd;
+}
+table tbody tr:nth-last-of-type(even){
+	background-color: #f3f3f3;
+}
+table tbody tr:last-of-type{
+	border-bottom: 2px solid #4e4e4e;
+}
+
+.hq6{
+    background: rgb(253, 253, 253);
+    border: 1px solid #999;
+    opacity: 1;
+    color: #444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 8px;
+    width: 25%;
+    height: 280px;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.hq7{
+    background: rgb(253, 253, 253);
+    border: 1px solid #999;
+    opacity: 1;
+    color: #444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 8px;
+    width: 25%;
+    height: 280px;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+
+.hq8{
+    background: rgb(253, 253, 253);
+    border: 1px solid #999;
+    opacity: 1;
+    color: #444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 8px;
+    width: 25%;
+    height: 280px;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Resolution Grafic*/
+
+.grid-container{
+    display: grid;
+    gap: 2px;
+    grid-template-areas:
+    "header" 
+    "navbar"
+    "sidebar"
+    "main";
+}
+
+@media (min-width: 600px){
+    .grid-container{
+        grid-template:
+        "sidebar     header" 60px
+        "sidebar     navbar" 140px
+        "sidebar     main"   auto/
+        300px        auto;
+    }
+}
+
+@media (min-width: 900px){
+    .grid-container{
+        grid-template:
+        "sidebar    header header" 60px
+        "sidebar    navbar navbar" 100px
+        "sidebar    main   main" auto/
+         240px       auto   230px;
+    }
+}

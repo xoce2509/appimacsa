@@ -1,0 +1,81 @@
+/* Configuracion General*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    background: url(/assets/img/fondopwa2.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    min-height: 100vh;
+}
+
+/*Contenedor Principal*/
+
+.grid-container > *{
+    border-radius: 2px;
+    padding: 8px;
+}
+
+
+.header{
+    grid-area: header;
+    background: transparent;
+    backdrop-filter: blur(40px);
+    border-bottom: 1px solid #555;
+
+}
+
+.navbar{
+    grid-area: navbar;
+}
+
+.main{
+    grid-area: main;
+    background: transparent;
+    backdrop-filter: blur(1rem);
+    border-top: 1.4px solid #555;
+
+}
+
+/*Resolution Grafic*/
+
+.grid-container{
+    display: grid;
+    gap: 8px;
+    grid-template-areas:
+    "header" 
+    "navbar"
+    "main";
+}
+
+@media (min-width: 600px){
+    .grid-container{
+        grid-template:
+        "header     header" 70px
+        "navbar     navbar" 140px
+        "main       main"   auto/
+        auto       100px;
+    }
+}
+
+@media (min-width: 900px){
+    .grid-container{
+        grid-template:
+        "header     header header" 70px
+        "navbar     navbar navbar" 140px
+        "main       main   main" auto/
+        200px       auto   200px;
+    }
+}

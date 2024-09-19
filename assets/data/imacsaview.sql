@@ -1,0 +1,3 @@
+CREATE VIEW clients as
+SELECT (CODE, NAME, LASTNAME, CELLPHONE)
+FROM customers;

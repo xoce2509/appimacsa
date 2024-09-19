@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/registry.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/assets/js/configuraciongeneral.js"></script>
+    <title>Registry</title>
+</head>
+<body class="grid-container">
+    <header class="header">
+      <div class="topnav">
+        <a href="">Menu</a>
+        <a href="">Kanban</a>
+        <a href="">Logout</a>
+        <input type="text" name="" id="" placeholder="Search">
+      </div>
+    </header>
+    <nav class="navbar">
+    </nav>
+    <aside class="sidebar">
+        <div class="logo">
+          <h1>Imacsa</h1>
+        </div>
+        <br>
+        <button class="tablink" onclick="openPage('Dashboard', this, '#facc00')" id="defaultOpen"><i class='bx bxs-dashboard'></i>&nbsp;Dashboard</button>
+        <button class="tablink" onclick="openPage('Equipment', this, '#facc00')"><i class='bx bx-shape-circle'></i>&nbsp;Equipment</button>
+        <button class="tablink" onclick="openPage('Vehicles', this, '#facc00')"><i class='bx bx-shape-circle'></i>&nbsp;Vehicles</button>
+        <button class="tablink" onclick="openPage('SmallTools', this, '#facc00')"><i class='bx bx-shape-circle'></i>&nbsp;Tools</button>
+        <button class="tablink" onclick="openPage('Staff', this, '#facc00')"><i class='bx bx-shape-circle'></i>&nbsp;Staff</button>
+        <button class="tablink" onclick="openPage('Suppliers', this, '#facc00')"><i class='bx bx-shape-circle'></i>&nbsp;Suppliers</button>
+        <button class="tablink" onclick="openPage('Customers', this, '#facc00')"><i class='bx bx-shape-circle'></i>&nbsp;Customers</button>
+
+    </aside>
+    <main class="main">
+      <div id="Dashboard" class="tabcontent">
+        <div class="contenedor1">
+          <div class="titulo1">
+            <h3>Dashboard<small>  | resumen de todos los modulo del programa</small></h3>
+          </div>
+          <br>
+          <div class="reportcard">
+            <div class="report">
+              <i class='bx bxs-dollar-circle'></i>
+              <label for="">Investment</label>
+              <br>
+              <label for="">U$100,000.00</label>
+            </div>
+            <div class="report">
+              <i class='bx bx-money'></i>
+              <label for="">Income</label>
+              <br>
+              <label for="">U$160,000.00</label>
+            </div>
+            <div class="report">
+              <i class='bx bx-money-withdraw'></i>
+              <label for="">Bill</label>
+              <br>
+              <label for="">U$245,000.00</label>
+            </div>
+            <div class="report">
+              <i class='bx bxs-coin'></i>
+              <label for="">Cost</label>
+              <br>
+              <label for="">U$129,000.00</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Equipment" class="tabcontent">
+        <h3>Heavy Equipment</h3>
+        <br>
+        <div class="bloque">
+        <button class="botones" onclick="page('Registry', 'event')">Registry</button>
+        <button class="botones" onclick="page('Investment', 'event')">Inventory</button>
+        <button class="botones" onclick="page('Rent', 'event')">Rent</button>
+        </div>
+
+        <div id="Registry" class="contenido">
+          <div class="ttle">
+            <h4>Registry New Heavy Equipment</h4>
+          </div>
+          <div class="formulario1">
+            <form action="" method="get">
+              <div class="for1">
+                <input type="text" name="" id="id" placeholder="ID" disabled>
+                <input type="date" name="" id="date">
+              </div>
+              <br>
+              <div class="for2">
+                <input type="date" name="" id="purchase_date" placeholder="Purchase date">
+                <input type="text" name="" id="code" placeholder="Code">
+                <select name="" id="classification">
+                  <option value="">Classification</option>
+                </select>
+                <select name="" id="year">
+                  <option value="">Equipment Year</option>
+                </select>
+              </div>
+              <br>
+              <div class="for3">
+                <input type="text" name="" id="make" placeholder="Make">
+                <input type="text" name="" id="model" placeholder="Model">
+                <input type="text" name="" id="series" placeholder="Series">
+                <input type="text" name="" id="gps" placeholder="GPS">
+              </div>
+              <br>
+              <div class="for4">
+                <select name="" id="tire">
+                  <option value="">Tire Size</option>
+                </select>
+                <input type="text" name="" id="detail" placeholder="Tire Detail">
+                <input type="text" name="" id="engine" placeholder="Engine">
+                <input type="text" name="" id="engine_power" placeholder="Engine Power">
+              </div>
+              <br>
+              <div class="for5">
+                <select name="" id="type_fuel">
+                  <option value="">Type Fuel</option>
+                </select>
+                <input type="text" name="" id="description" placeholder="Description">
+                <input type="text" name="" id="cost" placeholder="Cost">
+              </div>
+              <div class="for6">
+                <input type="button" value="Save">
+                <input type="button" value="Edit">
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="Investment" class="contenido">
+          <div class="ttl2">
+            <h4>List of Inventory</h4>
+          </div>
+          <div class="tableform">
+            <table>
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Make</th>
+                  <th>Model</th>
+                  <th>Series</th>
+                  <th>Year</th>
+                  <th>U$ Cost</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Caterpillar</td>
+                  <td>CR255X</td>
+                  <td>SA000255LA005</td>
+                  <td>2020</td>
+                  <td>145,000.00</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div id="Rent" class="contenido">
+          <div class="rentcnt">
+            <div>
+              <h4>Service of Rent</h4>
+            </div>
+            <br>
+            <div></div>
+            <div></div>
+          </div>
+
+        </div>
+      
+      </div>
+      <div id="Vehicles" class="tabcontent">
+        <h3>Fleet Vehicles</h3>
+        <br>
+        <div class="bloque1">
+          <button class="btnfv" onclick="page1('Registry1', 'event1')">Registry</button>
+          <button class="btnfv" onclick="page1('Inventory1', 'event1')">Inventory</button>
+          <button class="btnfv" onclick="page1('Rent1', 'event1')">Rent</button>
+        </div>
+
+        <div id="Registry1" class="ctd1">
+          <div class="ttle">
+            <h4>Registry New Fleet Vehicles</h4>
+          </div>
+          <div class="formulario1">
+            <form action="" method="get">
+              <div class="for1">
+                <input type="text" name="" id="id" placeholder="ID">
+                <input type="date" name="" id="date">
+              </div>
+              <br>
+              <div class="for2">
+                <input type="date" name="" id="purchase_date">
+                <select name="" id="classification">
+                  <option value="">Classification</option>
+                </select>
+                <input type="text" name="" id="code" placeholder="Code">
+                <select name="" id="year">
+                  <option value="">Equipment Year</option>
+                </select>
+              </div>
+              <br>
+              <div class="for3">
+                <input type="text" name="" id="make" placeholder="Make">
+                <input type="text" name="" id="model" placeholder="Model">
+                <input type="text" name="" id="vin_number" placeholder="VIN">
+                <input type="text" name="" id="color" placeholder="Color">
+              </div>
+              <br>
+              <div class="for4">
+                <select name="" id="tire">
+                  <option value="">Tire Size</option>
+                </select>
+                <input type="text" name="" id="gps" placeholder="GPS">
+                <select name="" id="fuel">
+                  <option value="">Type of Fuel</option>
+                </select>
+                <input type="text" name="" id="engine" placeholder="Engine">
+              </div>
+              <br>
+              <div class="for5">
+                <input type="text" name="" id="engine_power" placeholder="Engine Power">
+                <input type="text" name="" id="plate_number" placeholder="Plate Number">
+                <input type="text" name="" id="registrationdue" placeholder="Registration Due">
+                <input type="text" name="" id="propietity" placeholder="Propietity">
+              </div>
+              <br>
+              <div class="for6">
+                <input type="text" name="" id="description" placeholder="Description">
+                <input type="text" name="" id="cost" placeholder="Cost">
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div id="Inventory1" class="ctd1">
+          <label for="">Registry General</label>
+        </div>
+
+        <div id="Rent1" class="ctd1">
+          <label for="">Service of Rent</label>
+        </div>
+      </div>
+      <div id="SmallTools" class="tabcontent">
+        <h3>Tools</h3>
+        <br>
+        <div class="bloque2">
+          <button class="btnst" onclick="page2('Registro', 'evento')">Registry</button>
+          <button class="btnst" onclick="page2('Inventario', 'evento')">Inventory</button>
+          <button class="btnst" onclick="page2('Renta', 'evento')">Rent</button>
+        </div>
+
+        <div id="Registro" class="ctd2">
+          <h4>New Small Tools Registry</h4>
+        </div>
+
+        <div id="Inventario" class="ctd2">
+          <label for="">List of Inventory</label>
+        </div>
+
+        <div id="Renta" class="ctd2">
+          <label for="">Service of Rent</label>
+        </div>
+      </div>
+      <div id="Staff" class="tabcontent">
+        <h3>Staff</h3>
+        <br>
+        <div class="bloque3">
+          <button class="btnsf" onclick="page3('Registramos', 'event3')">Registry</button>
+          <button class="btnsf" onclick="page3('Lista', 'event3')">List Staff</button>
+          <button class="btnsf" onclick="page3('Gastos', 'event3')">Bill</button>
+        </div>
+
+        <div id="Registramos" class="ctd3">
+          <label for="">Registry Staff</label>
+        </div>
+
+        <div id="Lista" class="ctd3">
+          <label for="">List of Staff</label>
+        </div>
+
+        <div id="Gastos" class="ctd3">
+          <label for="">Registry Bill</label>
+        </div>
+      </div>
+      <div id="Suppliers" class="tabcontent">
+        <h3>Suppliers</h3>
+        <br>
+        <div class="bloque4">
+          <button class="btnsp" onclick="page4('Creamos', 'event4')">Registry</button>
+          <button class="btnsp" onclick="page4('Listamos', 'event4')">List</button>
+          <button class="btnsp" onclick="page4('Costo', 'event4')">Cost</button>
+        </div>
+
+        <div id="Creamos" class="ctd4">
+          <label for="">Registry Suppliers</label>
+        </div>
+
+        <div id="Listamos" class="ctd4">
+          <label for="">List Suppliers</label>
+        </div>
+
+        <div id="Costo" class="ctd4">
+          <label for="">Cost of Inventory</label>
+        </div>
+      </div>
+      <div id="Customers" class="tabcontent">
+        <h3>Customers</h3>
+        <br>
+        <div class="bloque5">
+          <button class="btnct" onclick="page5('Registare', 'event5')">Registry</button>
+          <button class="btnct" onclick="page5('Listo', 'event5')">List</button>
+          <button class="btnct" onclick="page5('Ingresos', 'event5')">Income</button>
+        </div>
+
+        <div id="Registare" class="ctd5">
+          <label for="">Registry Customers</label>
+        </div>
+
+        <div id="Listo" class="ctd5">
+          <label for="">List Customer</label>
+        </div>
+
+        <div id="Ingresos" class="ctd5">
+          <label for="">Income Customers</label>
+        </div>
+      </div>
+
+    </main>    
+</body>
+</html>
