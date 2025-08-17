@@ -1,0 +1,1561 @@
+/* Configuracion General*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    background: url(../img/fondorenta.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    min-height: 100vh;
+}
+/*estilo dashboard main */
+.summary{
+    display: flex;
+    justify-content: center;
+}
+
+.panel{
+    height: 100%;
+}
+.pnl1{
+    table {
+        width: 85%;
+        border-collapse: collapse;
+    }
+
+    .ulcolumna{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 3px;
+    }
+    .ulcolumna li{
+        flex: 1 1 100px;
+        width: 21%;
+        list-style-type: none;
+        padding: 5px;
+        background-color: #f9f9f9;
+        border: 1px solid #b4b4b4;
+        border-radius: 5px;
+        height: 100px;
+        text-align: center;
+        margin: 1px;
+    }
+
+    .tcard1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .in1, .in2, .in3, .bil1, .pay1, .rec1{
+        border: none;
+        font-size: 18px;
+    }
+    
+}
+
+.pnl2{
+    height: 70%;
+    display: flex;
+    gap: 3px;
+    padding: 5px 10px;
+
+    .div75{
+        width: 75%;
+        border: 1px solid #b4b4bb;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        padding: 5px;
+
+        table {
+            width: 96%;
+            border-collapse: collapse;
+        }
+        
+        h3{
+            text-align: center;
+            margin: 5px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .progress-bar {
+            width: 100%;
+            background-color: #f3f3f3;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .progress {
+            height: 20px;
+            background-color: #4caf50;
+            text-align: center;
+            color: white;
+            line-height: 20px;
+        }
+    }
+    .div25{
+        width: 25%;
+        border: 1px solid #b4b4bb;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        padding: 3px;
+
+        h3 {
+            text-align: center;
+            color: #333;
+        }
+        
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            margin: 8px;
+            width: 300px;
+            text-align: center;
+        }
+        
+        .card h4 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .card p {
+            color: #666;
+        }
+        
+        .status {
+            font-weight: bold;
+        }
+        
+        .status.pending {
+            color: #ff9800;
+        }
+        
+        .status.completed {
+            color: #4caf50;
+        }
+        
+        .status.overdue {
+            color: #f44336;
+        }
+    }
+}
+
+.pnlrent{
+    height: 100%;
+    display: flex;
+    gap: 2px;
+    padding: 2px;
+
+    .dvrent1{
+        width: 40%;
+        border: 1px solid #b4b4bb;
+        background-color: #f9f9f9;
+        border-radius: 4px;
+        padding: 2px;
+
+        h4{
+            font-size: 18px;
+            color: #414141;
+            background-color: #dfdddd;
+        }
+        .frent1{
+            display: flex;
+            padding: 2px;
+            justify-content: center;
+            gap: 170px;
+            margin-top: 5px;
+        }
+        .frent1 input{
+            width: 100px;
+            height: 25px;
+            color: #555;
+            text-align: center;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid #333;
+            border-color: #555;
+            background-color: #f9f9f9;
+        }
+        h3{
+            font-size: 14px;
+            color: #414141;
+            text-align: center;
+        }
+        hr{
+            border: none;
+            border-top: 2px dotted rgb(61, 61, 61);
+            color: #fff;
+            background-color: #f9f9f9;
+            height: 1px;
+            width: 100%;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+        .frent2{
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .frent2 input{
+            width: 445px;
+            height: 25px;
+            margin-left: 25px;
+            margin-bottom: 2px;
+            border-bottom: 1px solid #555;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            background-color: #f9f9f9;
+        }
+        .frent2 select {
+            width: 445px;
+            height: 25px;
+            margin-left: 25px;
+            margin-bottom: 2px;
+            border-bottom: 1px solid #555;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            background-color: #f9f9f9;
+        }
+        .frent3{
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        .frent3 input{
+            width: 445px;
+            height: 25px;
+            margin-left: 25px;
+            margin-bottom: 2px;
+            border-bottom: 1px solid #555;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            background-color: #f9f9f9;
+        }
+        .frent3 select {
+            width: 445px;
+            height: 25px;
+            margin-left: 25px;
+            margin-bottom: 2px;
+            border-bottom: 1px solid #555;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            background-color: #f9f9f9;
+        }
+        .frent4{
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+        }
+        .frent4 select{
+            width: 130px;
+            height: 25px;
+            color: #555;
+            text-align: center;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid #333;
+            border-color: #555;
+            background-color: #f9f9f9;
+            margin: 10px;
+        }
+        .frent5{
+            justify-content: center;
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+
+        }
+        .frent5 input{
+            width: 170px;
+            height: 25px;
+            margin-left: 25px;
+            margin-bottom: 2px;
+            border-bottom: 1px solid #555;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            background-color: #f9f9f9;
+        }
+        .frt2{
+            display: flex;
+            justify-content: center;
+            padding: 5px 10px;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .frt2 button{
+            width: 120px;
+            height: 25px;
+            background-color: #fcc015;
+            color: #414141;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff9800;
+            color: #000;
+        }
+    }
+    .dvrent2{
+        width: 60%;
+        border: 1px solid #b4b4bb;
+        background-color: #f9f9f9;
+        border-radius: 4px;
+        padding: 2px;
+    }
+}
+
+
+/* Estilo equipo pesado */
+.bloque{
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+.bloque button{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+.bloque button:hover{
+    background-color: #ddd;
+}
+.bloque button.active{
+    background-color: #ccc;
+}
+.contenido{
+    display: none;
+    padding: 2px 8px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+/* estilo del formulario*/
+.ttle, h4{
+    text-align: center;
+    margin-top: 2px;
+}
+.formulario1{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    .for1{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+        input {
+            width: 20%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+    .for2{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+        input, select {
+            width: 20%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select,option::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+    .for3{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+        input, select {
+            width: 20%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select,option::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+    .for4{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+        input, select {
+            width: 20%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select,option::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+    .for5{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+        input, select {
+            width: 20%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select,option::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+    .for6{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        button{
+            padding: 10px 20px;
+            background-color: #facc00;
+            color: #414141;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #ff9800;
+            color: #000;
+        }
+    }
+}
+.formulario2{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    .for7{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+        input {
+            width: 20%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+    .for8{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+        input, select {
+            width: 20%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select,option::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+    .for9{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+        input {
+            width: 20%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+    .for10{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+        input, select {
+            width: 20%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select,option::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+    .for11{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+        input {
+            width: 20%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+    .for12{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        button{
+            padding: 10px 20px;
+            background-color: #facc00;
+            color: #414141;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #ff9800;
+            color: #000;
+        }
+    }
+}
+.formulario3{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    .for13{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        input {
+            width: 20%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+
+    .for14{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        input, select {
+            width: 20%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select,option::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+
+    .for15{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        input {
+            width: 20%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+
+    .for16{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        input, select {
+            width: 20%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select,option::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+
+    .for18{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        button{
+            padding: 10px 20px;
+            background-color: #facc00;
+            color: #414141;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #ff9800;
+            color: #000;
+        }
+    }
+}
+.formulario4{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    .for19{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        input {
+            width: 20%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+
+    .for20{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        input {
+            width: 44%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 6px;
+            margin-right: 3%;
+        }
+        input,select::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+
+    .for21{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        input {
+            width: 20%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+
+    .for22{
+       display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        input, select {
+            width: 20%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select,option::placeholder{
+            text-align: center;
+            color: #777;
+        } 
+    }
+
+    .for23{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        input {
+            width: 20%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+
+    .for24{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        button{
+            padding: 10px 20px;
+            background-color: #facc00;
+            color: #414141;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #ff9800;
+            color: #000;
+        }
+    }
+}
+.formulario5{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    .for25{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        input {
+            width: 20%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+    .for26{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        input {
+            width: 20%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+    .for27{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        input {
+            width: 20%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+    .for28{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        input, select {
+            width: 20%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select,option::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+    .for29{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        input {
+            width: 20%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+    .for30{
+       display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        button{
+            padding: 10px 20px;
+            background-color: #facc00;
+            color: #414141;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #ff9800;
+            color: #000;
+        } 
+    }
+}
+.formulario6{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    .for31{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+        input {
+            width: 20%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+
+    .for32{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+        input {
+            width: 20%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+    
+    .for33{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+        input {
+            width: 20%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+
+    .for34{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+        input, select {
+            width: 20%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select,option::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+    .for35{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+        input, select {
+            width: 20%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin: 8px;
+            margin-right: 3%;
+        }
+        input,select,option::placeholder{
+            text-align: center;
+            color: #777;
+        }
+    }
+
+    .for36{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        button{
+            padding: 10px 20px;
+            background-color: #facc00;
+            color: #414141;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #ff9800;
+            color: #000;
+        }
+    }
+}
+/*sin de estilo del formulario*/
+/* estilo del inventario*/
+h4 {
+    text-align: center;
+}
+
+.tableform1{
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.tbform {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0px;
+}
+
+.th1, .td1 {
+    padding: 4px;
+    border: 1px solid #a7a7a7;
+    text-align: center;
+    font-size: 13px;
+}
+
+.thform {
+    background-color: #facc00;
+}
+
+.tbd .trform{
+    background: #f9f9f9;
+}
+.td1{
+    background: #f9f9f9;
+}
+
+/* Media Queries para hacer la tabla responsiva */
+@media (max-width: 768px) {
+    .tbform, .thform, .tbd, .th1, .td1, .trform {
+        display: block;
+    }
+
+    .trform {
+        margin-bottom: 25px;
+    }
+
+    .td1 {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .td1::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+/*fin del estilo del inventario*/
+/* Estilo Flota de Vehiculos */
+.bloque1{
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+.bloque1 button{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+.bloque1 button:hover{
+    background-color: #ddd;
+}
+.bloque1 button.active{
+    background-color: #ccc;
+}
+.ctd1{
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+/* Estilo de Herramienta Pequeñas */
+.bloque2{
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1; 
+}
+.bloque2 button{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+.bloque2 button:hover{
+    background-color: #ddd;
+}
+.bloque2 button.active{
+    background-color: #ccc;
+}
+.ctd2{
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+/* Estilo Staff */
+.bloque3{
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+.bloque3 button{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+.bloque3 button:hover{
+    background-color: #ddd;
+}
+.bloque3 button.active{
+    background-color: #ccc;
+}
+.ctd3{
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none; 
+}
+/* Estilo Suppliers */
+.bloque4{
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+.bloque4 button{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+.bloque4 button:hover{
+    background-color: #ddd;
+}
+.bloque4 button.active{
+    background-color: #ccc;
+}
+.ctd4{
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+/* Estilo Customers */
+.bloque5{
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+.bloque5 button{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+.bloque5 button:hover{
+    background-color: #ddd;
+}
+.bloque5 button.active{
+    background-color: #ccc;
+}
+.ctd5{
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: transparent;
+    color: #888;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 25px 16px;
+    font-size: 16px;
+    width: 180px;
+    text-align: left;
+    transition: all 0.6s ease-in-out;
+  }
+
+  .tablink:hover {
+    background-color: #facc00;
+    color: #000;
+  }
+
+
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    color: black;
+    display: none;
+    padding: 8px 10px;
+    height: 100%;
+    margin-top: 1px;
+    border: 0.5px solid #999;
+    border-radius: 5px;
+    opacity: 0.98;
+  }
+
+  #Dashboard {background-color: #dee2e8;}
+  #Equipment {background-color: #dee2e8;}
+  #Vehicles {background-color: #dee2e8;}
+  #Tools {background-color: #dee2e8;}
+  #SmallTools {background-color: #dee2e8;}
+  #Staff {background-color: #dee2e8;}
+  #Suppliers {background-color: #dee2e8;}
+  #Customers {background-color: #dee2e8;}
+
+
+.mod{
+    display: flex;
+
+}
+
+.mod1{
+    background: #000;
+}
+
+.btn{
+    display: block;
+    background-color: black;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 13px 10px;
+    font-size: 16px;
+    width: 180px;
+    text-align: left;
+    transition: all 0.6s ease-in-out;
+}
+.btn:hover{
+    background-color: #555;
+    color: #fcc015;
+}
+
+.ctnido{
+    color: #000;
+    display: none;
+    padding: 15px 10px;
+    height: 528px;
+    width: 750px;
+    margin-top: 0px;
+    border: 0.5px solid #777;
+    border-radius: 0px;
+    opacity: 0.97;
+}
+#Backhoes{background-color: transparent;}
+#Brooms{background-color: transparent;}
+#Dozers{background-color: transparent;}
+#Excavators{background-color: transparent;}
+#Lifts{background-color: transparent;}
+#Forklifts{background-color: transparent;}
+#Graders{background-color: transparent;}
+#Loaders{background-color: transparent;}
+#Pavers{background-color: transparent;}
+#Rollers{background-color: transparent;}
+#Skidsteers{background-color: transparent;}
+#Misc{background-color: transparent;}
+
+.reg{
+    display: flex;
+}
+.reg1{
+    background: #000;
+}
+.btnreg{
+    display: block;
+    background-color: black;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 13px 10px;
+    font-size: 16px;
+    width: 180px;
+    text-align: left;
+    transition: all 0.6s ease-in-out;
+}
+.btnreg:hover{
+    background-color: #555;
+    color: #fcc015;
+}
+.regctn{
+    color: #000;
+    display: none;
+    padding: 15px 10px;
+    height: 528px;
+    width: 700px;
+    margin-top: 0px;
+    border: 0.5px solid #777;
+    border-radius: 0px;
+    opacity: 0.97;
+}
+#Dumptrucks{background-color: transparent;}
+#Fueltrucks{background-color: transparent;}
+#Lowboys{background-color: transparent;}
+#Maintenancetrucks{background-color: transparent;}
+#Pickups{background-color: transparent;}
+#Vans{background-color: transparent;}
+#Suvs{background-color: transparent;}
+#Trailers{background-color: transparent;}
+#Watertrucks{background-color: transparent;}
+#Welder{background-color: transparent;}
+
+.rgs{
+    display: flex;
+}
+.rgs1{
+    background: #000;
+}
+.btntl{
+    display: block;
+    background-color: black;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 13px 10px;
+    font-size: 16px;
+    width: 180px;
+    text-align: left;
+    transition: all 0.6s ease-in-out;
+}
+.btntl:hover{
+    background-color: #555;
+    color: #fcc015;
+}
+.rgctd{
+    color: #000;
+    display: none;
+    padding: 15px 10px;
+    height: 528px;
+    width: 700px;
+    margin-top: 0px;
+    border: 0.5px solid #777;
+    border-radius: 0px;
+    opacity: 0.97;
+}
+#Compressors{background-color: transparent;}
+#Compactors{background-color: transparent;}
+#Drills{background-color: transparent;}
+#Generator{background-color: transparent;}
+#Hammers{background-color: transparent;}
+#Misctools{background-color: transparent;}
+#Pumps{background-color: transparent;}
+#Pressurewashers{background-color: transparent;}
+#Saws{background-color: transparent;}
+#Surveyingtools{background-color: transparent;}
+/*Contenedor Principal*/
+
+.grid-container > *{
+    border-radius: 2px;
+    padding: 1px;
+}
+
+
+.header{
+    grid-area: header;
+    background: #facc00;
+    .topnav{
+        overflow: hidden;
+    }
+    .topnav a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        margin: 2px;
+        padding: 16px 20px;
+        text-decoration: none;
+        font-size: 14px;
+      }
+      .topnav a:hover {
+        background-color: #000;
+        color: #facc00;
+        transition: 0.8s;
+      }
+      i{
+        font-size: 20px;
+      }
+      .topnav i{
+        min-width: 36px;
+        
+      }
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background: rgb(40,40,40);
+    background: linear-gradient(0deg, rgba(40,40,40,1) 0%, rgba(26,26,26,1) 36%, rgba(0,0,0,1) 100%);
+    opacity: 0.98;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    padding: 0 0.5rem;
+
+    .logo{
+        color: #facc00;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid #777;
+        margin-top: 8px;
+        height: 60px;
+    }
+ }
+
+.main{
+    grid-area: main;
+}
+
+
+/*Resolution Grafic*/
+
+.grid-container{
+    display: grid;
+    gap: 1px;
+    grid-template-areas:
+    "header" 
+    "sidebar"
+    "main";
+}
+
+@media (min-width: 600px){
+    .grid-container{
+        grid-template:
+        "sidebar     header" 65px
+        "sidebar     main"   140px
+        "sidebar     main"   auto/
+        230px        auto;
+    }
+}
+
+@media (min-width: 900px){
+    .grid-container{
+        grid-template:
+        "sidebar    header header" 65px
+        "sidebar    main   main" 100px
+        "sidebar    main   main" auto/
+         195px       auto   150px;
+    }
+}
