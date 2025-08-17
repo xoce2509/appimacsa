@@ -103,23 +103,19 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 500px) {
-    #login-1 {
-        width: 95vw;
-        padding: 20px 10px;
+@media screen and (max-width: 600px){
+    form {
+        width: 100%;
+        padding: 1em;
     }
-    #login-1 h1 {
-        font-size: 28px;
+    input, select, textarea {
+        width: 100%;
+        font-size: 1rem;
+        margin-bottom: 1em;
     }
-    .input-user,
-    .input-password {
-        margin: 20px 0;
-        height: 45px;
+    label {
+        display: block;
+        margin-bottom: 0.5em;
     }
-    #btn-login {
-        height: 40px;
-        font-size: 14px;
-    }
-
 }
 
