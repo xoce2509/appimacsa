@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta http-equiv="content-script-type" content="text/javascript">
+    <meta http-equiv="content-style-type" content="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/registry.css" type="text/css">
+    <script src="../js/configuraciongeneral.js" type="text/javascript"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Registry</title>
+</head>
+<body class="grid-container">
+    <header class="header">
+      <div class="topnav">
+        <a href="../html/menu.html"><i class='bx bx-menu'></i></a>
+        <a href="../html/task.html"><i class='bx bx-task'></i></a>
+        <a href="../html/book.html"><i class='bx bx-book'></i></a>
+        <a href="../html/index.html"><i class='bx bx-log-out-circle'></i></a>
+      </div>
+    </header>
+    <aside class="sidebar"> 
+        <div class="logo">
+          <h1>Imacsa</h1>
+        </div>
+        <br>
+        <button class="tablink" onclick="openPage('Dashboard', this, '#facc00')"><i class='bx bxs-dashboard'></i>&nbsp;Dashboard</button>
+        <button class="tablink" onclick="openPage('Equipment', this, '#facc00')"><i class="fas fa-hard-hat"></i>&nbsp;Equipment</button>
+        <button class="tablink" onclick="openPage('Vehicles', this, '#facc00')"><i class="fas fa-truck"></i>&nbsp;Vehicles</button>
+        <button class="tablink" onclick="openPage('SmallTools', this, '#facc00')"><i class="fas fa-tools"></i>&nbsp;Tools</button>
+        <button class="tablink" onclick="openPage('Staff', this, '#facc00')"><i class="fas fa-user"></i>&nbsp;Staff</button>
+        <button class="tablink" onclick="openPage('Suppliers', this, '#facc00')"><i class="fas fa-people-carry"></i>&nbsp;Suppliers</button>
+        <button class="tablink" onclick="openPage('Customers', this, '#facc00')"><i class="fas fa-user-tie"></i>&nbsp;Customers</button>
+
+    </aside>
+    <main class="main">
+      <div id="Dashboard" class="tabcontent">
+        <div class="summary"><h3>Company summary</h3></div>
+        <div class="panel">
+          <div class="pnl1">
+            <ul class="ulcolumna">
+              <li><h4>Income Equipment</h4>
+                <table>
+                  <tr class="tcard1">
+                    <td class="in1" id="income-equipment">Loading...</td>
+                  </tr>
+                </table>
+              </li>
+              <li><h4>Income Vehicles</h4>
+                <table>
+                  <tr class="tcard1">
+                    <td class="in2" id="income-vehicles">Loading...</td>
+                  </tr>
+                </table>
+              </li>
+              <li><h4>Income Tools</h4>
+                <table>
+                  <tr class="tcard1">
+                    <td class="in3" id="income-tools">Loading...</td>
+                  </tr>
+                </table>
+              </li>
+              <li><h4>Bills Staff</h4>
+                <table>
+                  <tr class="tcard1">
+                    <td class="bil1" id="bills-staff">Loading...</td>
+                  </tr>
+                </table>
+              </li>
+              <li><h4>Account Payable</h4>
+                <table>
+                  <tr class="tcard1">
+                    <td class="pay1" id="account-payable">Loading...</td>
+                  </tr>
+                </table>
+              </li>
+              <li><h4>Account Receivable</h4>
+                <table>
+                  <tr class="tcard1">
+                    <td class="rec1" id="account-receivalbe">Loading...</td>
+                  </tr>
+                </table>
+              </li>
+            </ul>
+          </div>
+          <div class="pnl2">
+            <div class="div75">
+              <h3>Rental Services</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Equipment, Vehicle and Tools</th>
+                  <th>Rental Time (Hr)</th>
+                  <th>Progress</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Caterpillar | 262C-XPS</td>
+                  <td>160</td>
+                  <td>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 50%;">50%</div>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                  <td>Ford | LT8501</td>
+                  <td>48</td>
+                  <td>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;">75%</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Caterpillar | 412B</td>
+                  <td>32</td>
+                  <td>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 25%;">25%</div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+            <div class="div25">
+              <h3>Maintenance Alert</h3>
+              <div class="card-container">
+                <div class="card">
+                  <h4>Ford | F450</h4>
+                  <p>Next maintenance: 10/10/2024</p>
+                  <p>Status: <span class="status pending">Pending</span></p>
+                </div>
+                <div class="card">
+                  <h4>Caterpillar | 420B</h4>
+                  <p>Next Maintenance: 15/10/2024</p>
+                  <p>Status: <span class="status completed">Completed</span></p>
+                </div>
+                <div class="card">
+                  <h4>Caterpillar | 262C-XPS</h4>
+                  <p>Next maintenance: 20/10/2014</p>
+                  <p>Status: <span class="status overdue">Late</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Equipment" class="tabcontent">
+        <h3>Heavy Equipment</h3>
+        <br>
+        <div class="bloque">
+        <button class="botones" onclick="page('Registry', 'event')">Registry</button>
+        <button class="botones" onclick="page('Investment', 'event')">Inventory</button>
+        <button class="botones" onclick="page('Rent', 'event')">Rent</button>
+        </div>
+        <div id="Registry" class="contenido">
+          <div class="ttle">
+            <h3>Registry New Heavy Equipment</h3>
+          </div>
+          <div class="formulario1">
+            <form id="registryequipment">
+              <div class="for1">
+                <input type="text" name="id" id="id" placeholder="ID">
+                <input type="date" name="eq_date" id="eq_date">
+              </div>
+              <br>
+              <div class="for2">
+                <input type="date" name="eq_purchase" id="eq_purchase" placeholder="Purchase date">
+                <input type="text" name="eq_code" id="eq_code" placeholder="Code">
+                <select name="eq_classification" id="eq_classification">
+                  <option value="">Classification</option>
+                </select>
+                <select name="eq_year" id="eq_year">
+                  <option value="">Equipment Year</option>
+                </select>
+              </div>
+              <br>
+              <div class="for3">
+                <input type="text" name="eq_make" id="eq_make" placeholder="Make">
+                <input type="text" name="eq_model" id="eq_model" placeholder="Model">
+                <input type="text" name="eq_series" id="eq_series" placeholder="Series">
+                <input type="text" name="eq_gps" id="eq_gps" placeholder="GPS">
+              </div>
+              <br>
+              <div class="for4">
+                <select name="eq_tire" id="eq_tire">
+                  <option value="">Tire Size</option>
+                </select>
+                <input type="number" name="eq_initialreading" id="eq_initialrealding" placeholder="Initial Reading">
+                <input type="text" name="eq_engine" id="eq_engine" placeholder="Engine">
+                <input type="text" name="eq_power" id="eq_power" placeholder="Engine Power">
+              </div>
+              <br>
+              <div class="for5">
+                <select name="eq_fuel" id="eq_fuel">
+                  <option value="">Type Fuel</option>
+                </select>
+                <input type="text" name="eq_description" id="e_description" placeholder="Description">
+                <input type="text" name="eq_cost" id="e_cost" placeholder="Cost">
+              </div>
+              <div class="for6">
+                <button type="button" onclick="submitEquipment()">Add</button>
+                <button type="button" onclick="deleteRegistry('registryequipment', 'registry_equipment', 'id', 'date_d', 'purchase_date', 'code_he', 'classification', 'model_year', 'make', 'model', 'series', 'gps', 'tire', 'detail', 'engine', 'engine_power', 'fuel', 'description_he', 'cost')">Delete</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="Investment" class="contenido">
+          <div class="ttl2">
+            <h4>List of Inventory</h4>
+          </div>
+          <div class="tableform1">
+            <table class="tbform">
+              <thead class="thform">
+                <tr class="trform">
+                  <th class="th1">Id</th>
+                  <th class="th1">Purchase date</th>
+                  <th class="th1">Code</th>
+                  <th class="th1">Classification</th>
+                  <th class="th1">Year</th>
+                  <th class="th1">Make</th>
+                  <th class="th1">Model</th>
+                  <th class="th1">Series</th>
+                  <th class="th1">Tire size</th>
+                  <th class="th1">Engine</th>
+                  <th class="th1">Horometro</th>
+                  <th class="th1">Type Fuel</th>
+                  <th class="th1">Cost U$</th>
+                </tr>
+              </thead>
+              <tbody class="tbd">
+                <!--aqui se añadira la informacion del formulario-->
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div id="Rent" class="contenido">
+          <div class="pnlrent">
+            <div class="dvrent1">
+              <div class="formrent">
+                <div>
+                  <h4>Service Invoice</h4>
+                  <hr>
+                </div>
+                <form id="serviceequipment">
+                  <div class="frent1">
+                    <input type="number" name="number" id="id" placeholder="Id">
+                    <input type="date" name="date" id="date">
+                  </div>
+                  <div class="frent2">
+                    <h3>Company data</h3>
+                    <select name="company" id="m_company">
+                      <option value="">Select Company</option>t
+                    </select>
+                    <input type="text" name="m_address" id="m_email" placeholder="Address">
+                    <input type="text" name="m_cellphone" id="m_cellphone" placeholder="Cellphone">
+                  </div>
+                  <hr>
+                  <div class="frent3">
+                    <h3>Client data</h3>
+                    <select name="client" id="c_company">
+                      <option value="">Select Company</option>
+                    </select>
+                    <input type="text" name="email" id="c_email" placeholder="Email">
+                    <input type="text" name="phone" id="c_cellphone" placeholder="Cellphone">
+                  </div>
+                  <hr>
+                  <div class="frent4">
+                    <select name="make" id="make">
+                        <option value="">Make</option>
+                    </select>
+                    <select name="model" id="model">
+                        <option value="">Model</option>
+                    </select>
+                    <select name="year" id="year">
+                        <option value="">Year</option>
+                    </select>
+                    <select name="fuel" id="fuel">
+                        <option value="">Fuel</option>
+                    </select>
+                  </div>
+                  <div class="frent5">
+                    <div class="frt1">
+                      <input type="number" name="" id="er_time" placeholder="Rent Time">
+                      <input type="number" name="" id="er_cost" placeholder="U$ Cost">
+                      <input type="number" name="" id="er_fuel" placeholder="U$ Fuel">
+                      <input type="number" name="" id="er_driver" placeholder="U$ Driver">
+                      <input type="number" name="" id="er_utility" placeholder="U$ Utility">
+                      <input type="number" name="" id="er_total" placeholder="U$ Total">
+                    </div>
+                    <div class="frt2">
+                      <button type="submit">Save</button>
+                      <button type="reset">Reset</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="dvrent2">
+              <div class="tablerent">
+                <div><h4>Registered Invoice</h4></div>
+              </div>
+                <style>
+                  table {
+                    width: 95%;
+                    border-collapse: collapse;
+                    margin-left: 15px;
+                    margin-top: 10px;
+                  }
+                  th, td {
+                    border: 1px solid #ddd;
+                    padding: 10px;
+                    font-size: 13px;
+                  }
+                  th {
+                    background-color: #f2f2f2;
+                  }
+                </style>
+               <table id="tabla">
+                  <thead>
+                    <tr>
+                      <th>Id</th>
+                      <th>Date</th>
+                      <th>Company</th>
+                      <th>Client</th>
+                      <th>Make</th>
+                      <th>Model</th>
+                      <th>Year</th>
+                      <th>U$ Income</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!--aqui se añadira los datos del formulario de registro-->
+                  </tbody>
+                </table>
+             </div>
+            </div>
+        </div>
+      </div>
+      <div id="Vehicles" class="tabcontent">
+        <h3>Fleet Vehicles</h3>
+        <br>
+        <div class="bloque1">
+          <button class="btnfv" onclick="page1('Registry1', 'event1')">Registry</button>
+          <button class="btnfv" onclick="page1('Inventory1', 'event1')">Inventory</button>
+          <button class="btnfv" onclick="page1('Rent1', 'event1')">Rent</button>
+        </div>
+
+        <div id="Registry1" class="ctd1">
+          <div class="ttle">
+            <h3>Registry New Fleet Vehicles</h3>
+          </div>
+          <div class="formulario2">
+            <form id="registryvehicles">
+              <div class="for7">
+                <input type="text" name="id" id="id" placeholder="ID">
+                <input type="date" name="date_d" id="date_d">
+              </div>
+              <br>
+              <div class="for8">
+                <input type="date" name="purchase_date" id="purchase_date">
+                <select name="classification" id="classification">
+                  <option value="">Classification</option>
+                </select>
+                <input type="text" name="code" id="code" placeholder="Code">
+                <select name="model_year" id="model_year">
+                  <option value="">Vehicle Year</option>
+                </select>
+              </div>
+              <br>
+              <div class="for9">
+                <input type="text" name="make" id="make" placeholder="Make">
+                <input type="text" name="model" id="model" placeholder="Model">
+                <input type="text" name="vin_number" id="vin_number" placeholder="VIN">
+                <input type="text" name="color" id="color" placeholder="Color">
+              </div>
+              <br>
+              <div class="for10">
+                <select name="tire" id="tire">
+                  <option value="">Tire Size</option>
+                </select>
+                <input type="text" name="gps" id="gps" placeholder="GPS">
+                <select name="fuel" id="fuel">
+                  <option value="">Type of Fuel</option>
+                </select>
+                <input type="text" name="plate_number" id="plate_number" placeholder="Plate Number">
+              </div>
+              <br>
+              <div class="for11">
+                <input type="text" name="registrationdue" id="registrationdue" placeholder="Registration Due">
+                <input type="text" name="propietity" id="propietity" placeholder="Propietity">
+                <input type="text" name="description" id="description" placeholder="Description">
+                <input type="text" name="cost" id="cost" placeholder="Cost">
+              </div>
+              <br>
+              <div class="for12">
+                <button type="button" onclick="addRegistry('registryvehicles', 'registry_vehicles', 'id', 'date', 'purchase_date', 'classification', 'code', 'year', 'make', 'model', 'vin_number', 'color', 'tire', 'gps', 'fuel', 'plate_number', 'registrationdue', 'propietity', 'description', 'cost')">Add</button>
+                <button type="button" onclick="deleteRegistry('registryvehicles', 'registry_vehicles', 'id', 'date', 'purchase_date', 'classification', 'code', 'year', 'make', 'model', 'vin_number', 'color', 'tire', 'gps', 'fuel', 'plate_number', 'registrationdue', 'propietity', 'description', 'cost')">Delete</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="Inventory1" class="ctd1">
+          <div class="ttl2">
+            <h4>List of Inventory</h4>
+          </div>
+          <div class="tableform">
+            <table class="tbform">
+              <thead class="thform">
+                <tr class="trform">
+                  <th class="th1">Id</th>
+                  <th class="th1">Purchase</th>
+                  <th class="th1">Classification</th>
+                  <th class="th1">Year</th>
+                  <th class="th1">Make</th>
+                  <th class="th1">Model</th>
+                  <th class="th1">VIN</th>
+                  <th class="th1">Tire size</th>
+                  <th class="th1">Type Fuel</th>
+                  <th class="th1">Color</th>
+                  <th class="th1">U$ Cost</th>
+                </tr>
+              </thead>
+              <tbody class="tbd">
+                <!--filas de registro se añadiran aqui-->
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div id="Rent1" class="ctd1">
+          <div class="pnlrent">
+            <div class="dvrent1">
+              <div class="formrent">
+                <div>
+                  <h4>Vehicle Rental Invoice</h4>
+                  <hr>
+                </div>
+                <form action="" method="post">
+                  <div class="frent1">
+                    <input type="number" name="" id="id" placeholder="Id">
+                    <input type="date" name="" id="date">
+                  </div>
+                  <div class="frent2">
+                    <h3>Company data</h3>
+                    <select name="" id="m_company">
+                      <option value="">Select Company</option>
+                    </select>
+                    <input type="text" name="" id="m_address" placeholder="Address:">
+                    <input type="text" name="" id="m_cellphone" placeholder="Cellphone:">
+                  </div>
+                  <hr>
+                  <div class="frent3">
+                    <h3>Client data</h3>
+                    <select name="" id="c_company">
+                      <option value="">Select Company</option>
+                    </select>
+                    <input type="text" name="" id="c_email" placeholder="Email">
+                    <input type="text" name="" id="c_cellphone" placeholder="Cellphone">
+                  </div>
+                  <hr>
+                  <div class="frent4">
+                    <select name="" id="make">
+                        <option value="">Make</option>
+                    </select>
+                    <select name="" id="model">
+                        <option value="">Model</option>
+                    </select>
+                    <select name="" id="vh_vin">
+                        <option value="">VIN</option>
+                    </select>
+                    <select name="" id="fuel">
+                        <option value="">Fuel</option>
+                    </select>
+                  </div>
+                  <div class="frent5">
+                    <div class="frt1">
+                      <input type="number" name="" id="vr_time" placeholder="Rental Time ">
+                      <input type="number" name="" id="vr_fuel" placeholder="U$ Fuel">
+                      <input type="number" name="" id="vr_tire" placeholder="U$ Tire">
+                      <input type="number" name="" id="vr_driver" placeholder="U$ Driver">
+                      <input type="number" name="" id="vr_cost" placeholder="U$ Cost">
+                      <input type="number" name="" id="vr_total" placeholder="U$ Total">
+                    </div>
+                    <div class="frt2">
+                      <button type="submit">Save</button>
+                      <button type="reset">Reset</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="dvrent2">
+              <div class="tablerent">
+                <div><h4>Registered Invoice</h4></div>
+              </div>
+                <style>
+                  table {
+                    width: 95%;
+                    border-collapse: collapse;
+                    margin-left: 15px;
+                    margin-top: 10px;
+                  }
+                  th, td {
+                    border: 1px solid #ddd;
+                    padding: 10px;
+                  }
+                  th {
+                    background-color: #f2f2f2;
+                  }
+                </style>
+               <table id="tabla">
+                  <thead>
+                    <tr>
+                      <th>Id</th>
+                      <th>Date</th>
+                      <th>Company</th>
+                      <th>Client</th>
+                      <th>Make</th>
+                      <th>Model</th>
+                      <th>U$ Cost</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- aqui se coloca la informacion-->
+                  </tbody>
+                </table>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="SmallTools" class="tabcontent">
+        <h3>Tools</h3>
+        <br>
+        <div class="bloque2">
+          <button class="btnst" onclick="page2('Registro', 'evento')">Registry</button>
+          <button class="btnst" onclick="page2('Inventario', 'evento')">Inventory</button>
+          <button class="btnst" onclick="page2('Renta', 'evento')">Rent</button>
+        </div>
+
+        <div id="Registro" class="ctd2">
+          <div class="ttle">
+            <h3>New Small Tools Registry</h3>
+          </div>
+          <div class="formulario3">
+            <form id="registrytool">
+              <div class="for13">
+                <input type="text" name="id" id="id" placeholder="ID">
+                <input type="date" name="date" id="date">
+              </div>
+              <div class="for14">
+                <input type="date" name="purchase_date" id="purchase_date">
+                <select name="classification" id="classification">
+                  <option value="">Classification</option>
+                </select>
+                <select name="model_year" id="model_year">
+                  <option value="">Year Tools</option>
+                </select>
+                <input type="text" name="code" id="code" placeholder="Code">
+              </div>
+              <div class="for15">
+                <input type="text" name="make" id="make" placeholder="Make">
+                <input type="text" name="model" id="model" placeholder="Model">
+                <input type="text" name="series" id="series" placeholder="Series">
+                <input type="text" name="gps" id="gps" placeholder="GPS">
+              </div>
+              <div class="for16">
+                <select name="type_combustion" id="type_combustion">
+                  <option value="">Combustion Type</option>
+                </select>
+                <select name="detail" id="detail">
+                  <option value="">Detail</option>
+                </select>
+                <input type="text" name="description" id="description" placeholder="Description">
+                <input type="number" name="cost" id="cost" placeholder="Cost">
+              </div>
+              <div class="for17">
+              </div>
+              <div class="for18">
+                <button type="submit">Save</button>
+                <button type="reset">Reset</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="Inventario" class="ctd2">
+          <div class="ttl2">
+            <h4>List of Inventory</h4>
+          </div>
+          <div class="tableform">
+            <table class="tbform">
+              <thead class="thform">
+                <tr class="trform">
+                  <th class="th1">Id</th>
+                  <th class="th1">Purchase</th>
+                  <th class="th1">Classification</th>
+                  <th class="th1">Year</th>
+                  <th class="th1">Code</th>
+                  <th class="th1">Make</th>
+                  <th class="th1">Model</th>
+                  <th class="th1">Series</th>
+                  <th class="th1">Combustion</th>
+                  <th class="th1">Detail</th>
+                  <th class="th1">U$ Cost</th>
+                </tr>
+              </thead>
+              <tbody class="tbd">
+                <!--aqui se añadira la informacion del formulario-->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="Renta" class="ctd2">
+          <div class="pnlrent">
+            <div class="dvrent1">
+              <div class="formrent">
+                <div>
+                  <h4>Tools Rental Invoice</h4>
+                  <hr>
+                </div>
+                <form action="" method="post">
+                  <div class="frent1">
+                    <input type="number" name="" id="id" placeholder="Id">
+                    <input type="date" name="" id="date">
+                  </div>
+                  <div class="frent2">
+                    <h3>Company data</h3>
+                    <select name="" id="m_company">
+                      <option value="">Select Company</option>
+                    </select>
+                    <input type="text" name="" id="m_email" placeholder="E-mail:">
+                    <input type="text" name="" id="m_cellphone" placeholder="Cellphone:">
+                  </div>
+                  <hr>
+                  <div class="frent3">
+                    <h3>Client data</h3>
+                    <select name="" id="c_company">
+                      <option value="">Select Company</option>
+                    </select>
+                    <input type="text" name="" id="c_email" placeholder="E-mail:">
+                    <input type="text" name="" id="c_cellphone" placeholder="Cellphone:">
+                  </div>
+                  <hr>
+                  <div class="frent4">
+                    <select name="" id="make">
+                        <option value="">Make</option>
+                    </select>
+                    <select name="" id="model">
+                        <option value="">Model</option>
+                    </select>
+                    <select name="" id="year">
+                        <option value="">Year</option>
+                    </select>
+                  </div>
+                  <div class="frent5">
+                    <div class="frt1">
+                      <input type="number" name="cost" id="cost" placeholder="US$ Cost">
+                      <input type="number" name="utility" id="utility" placeholder="US$ Utility">
+                      <input type="number" name="total" id="total" placeholder="US$ Total">
+                    </div>
+                    <div class="frt2">
+                      <button type="submit">Save</button>
+                      <button type="reset">Reset</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="dvrent2">
+              <div class="tablerent">
+                <div><h4>Registered Invoice</h4></div>
+              </div>
+                <style>
+                  table {
+                    width: 95%;
+                    border-collapse: collapse;
+                    margin-left: 15px;
+                    margin-top: 10px;
+                  }
+                  th, td {
+                    border: 1px solid #ddd;
+                    padding: 10px;
+                  }
+                  th {
+                    background-color: #f2f2f2;
+                  }
+                </style>
+               <table id="tabla">
+                  <thead>
+                    <tr>
+                      <th>Id</th>
+                      <th>Date</th>
+                      <th>Company</th>
+                      <th>Client</th>
+                      <th>Make</th>
+                      <th>Model</th>
+                      <th>Year</th>
+                      <th>U$ Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!--aqui se añadira la informacion del formulario-->
+                  </tbody>
+                </table>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Staff" class="tabcontent">
+        <h3>Staff</h3>
+        <br>
+        <div class="bloque3">
+          <button class="btnsf" onclick="page3('Registramos', 'event3')">Registry</button>
+          <button class="btnsf" onclick="page3('Lista', 'event3')">List Staff</button>
+          <button class="btnsf" onclick="page3('Gastos', 'event3')">Bill</button>
+        </div>
+
+        <div id="Registramos" class="ctd3">
+          <div class="ttle">
+            <h3>Registry New Staff</h3>
+          </div>
+          <div class="formulario4">
+            <form id="registrystaff">
+              <div class="for19">
+                <input type="text" name="id" id="id" placeholder="ID">
+                <input type="date" name="date" id="st_date">
+                <input type="text" name="code" id="workercode" placeholder="Workercode">
+              </div>
+              <div class="for20">
+                <input type="text" name="name" id="st_name" placeholder="Name">
+                <input type="text" name="lastname" id="st_lastname" placeholder="Lastname">
+              </div>
+              <div class="for21">
+                <input type="text" name="identification" id="st_identification" placeholder=" N° Identification">
+                <input type="number" name="age" id="st_age" placeholder="Age">
+                <input type="text" name="address" id="st_address" placeholder="Address">
+                <input type="text" name="phone" id="st_phone" placeholder="Phone">
+              </div>
+              <div class="for22">
+               <select name="" id="Working_rules">
+                <option value="">Working_rules</option>
+               </select>
+               <select name="" id="working_hours">
+                <option value="">Working Hours</option>
+               </select>
+                <select name="job_position" id="job_position">
+                  <option value="">Job position</option>
+                </select>
+                <select name="hiren" id="st_hiren">
+                  <option value="">Hiren</option>
+                </select>
+              </div>
+              <div class="for23">
+                <input type="text" name="sex" id="st_sex" placeholder="Sex">
+                <input type="number" name="salary" id="st_salary" placeholder="Salary">
+                <input type="text" name="observation" id="st_observation" placeholder="Observation">
+              </div>
+              <div class="for24">
+                <button type="submit">Save</button>
+                <button type="reset">Reset</button>
+              </div>
+            </form>
+          </div>
+        </div>    
+        <div id="Lista" class="ctd3">
+          <div class="ttl2">
+            <h4>List of Staff</h4>
+          </div>
+          <div class="tableform">
+            <table class="tbform">
+              <thead class="thform">
+                <tr class="trform">
+                  <th class="th1">Id</th>
+                  <th class="th1">Date</th>
+                  <th class="th1">Workercode</th>
+                  <th class="th1">Lastname</th>
+                  <th class="th1">Name</th>
+                  <th class="th1">Identification</th>
+                  <th class="th1">Age</th>
+                  <th class="th1">Cellphone</th>
+                  <th class="th1">Sex</th>
+                  <th class="th1">Jobposition</th>
+                  <th class="th1">Hiren</th>
+                  <th class="th1">Working Hours</th>
+                  <th class="th1">U$ Salary</th>
+                </tr>
+              </thead>
+              <tbody class="tbd">
+                <!--aqui se añadira la informacion del formulario-->
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div id="Gastos" class="ctd3">
+          <div class="pnlrent">
+            <div class="dvrent1">
+              <div class="formrent">
+                <div>
+                  <h4>Staff Expense Invoice</h4>
+                  <hr>
+                </div>
+                <form action="" method="post">
+                  <div class="frent1">
+                    <input type="number" name="" id="id" placeholder="Id">
+                    <input type="date" name="" id="date">
+                  </div>
+                  <div class="frent2">
+                    <h3>Company data</h3>
+                    <select name="" id="m_company">
+                      <option value="">Select Company</option>
+                    </select>
+                    <input type="text" name="email" id="m_email" placeholder="Email">
+                    <input type="text" name="phone" id="m_cellphone" placeholder="Cellphone">
+                  </div>
+                  <hr>
+                  <div class="frent3">
+                    <h3>Staff data</h3>
+                    <select name="" id="st_lastname">
+                      <option value="">Select Employee's Last Name</option>
+                    </select>
+                    <select name="" id="st_name">
+                      <option value="">Select Employee's Name</option>
+                    </select>
+                    <select name="" id="workercode">
+                      <option value="">Select Employee Code</option>
+                    </select>
+                  </div>
+                  <hr>
+                  <div class="frent4">
+                    <select name="" id="make">
+                        <option value="">Make</option>
+                    </select>
+                    <select name="" id="model">
+                        <option value="">Model</option>
+                    </select>
+                    <select name="" id="year">
+                        <option value="">Year</option>
+                    </select>
+                    <select name="" id="status">
+                        <option value="">Status</option>
+                    </select>
+                  </div>
+                  <div class="frent5">
+                    <div class="frt1">
+                      <input type="number" name="" id="salary" placeholder="US$ Salary">
+                      <input type="number" name="" id="deductible" placeholder="US$ no deductible">
+                      <input type="number" name="" id="vdamage" placeholder="US$ Vehicle damage">
+                      <input type="number" name="" id="workdelay" placeholder="US$ Work delay">
+                      <input type="number" name="" id="tdamage" placeholder="US$ Tool damage">
+                      <input type="number" name="" id="totalsalary" placeholder="US$ Total salary">
+                    </div>
+                    <div class="frt2">
+                      <button type="submit">Save</button>
+                      <button type="reset">Reset</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="dvrent2">
+              <div class="tablerent">
+                <div><h4>Registered Invoice</h4></div>
+              </div>
+                <style>
+                  table {
+                    width: 95%;
+                    border-collapse: collapse;
+                    margin-left: 15px;
+                    margin-top: 10px;
+                  }
+                  th, td {
+                    border: 1px solid #ddd;
+                    padding: 10px;
+                  }
+                  th {
+                    background-color: #f2f2f2;
+                  }
+                </style>
+               <table id="tabla">
+                  <thead>
+                    <tr>
+                      <th>Id</th>
+                      <th>Date</th>
+                      <th>Company</th>
+                      <th>Lastname</th>
+                      <th>Name</th>
+                      <th>U$ Total Salary</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!--aqui se añadira la informacion del formulario-->
+                  </tbody>
+                </table>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Suppliers" class="tabcontent">
+        <h3>Suppliers</h3>
+        <br>
+        <div class="bloque4">
+          <button class="btnsp" onclick="page4('Creamos', 'event4')">Registry</button>
+          <button class="btnsp" onclick="page4('Listamos', 'event4')">List</button>
+          <button class="btnsp" onclick="page4('Costo', 'event4')">Cost</button>
+        </div>
+
+        <div id="Creamos" class="ctd4">
+          <div class="ttle">
+            <h3>Registry New Suppliers</h3>
+          </div>
+          <div class="formulario5">
+            <form id="registrysuppliers">
+              <div class="for25">
+                <input type="text" name="id" id="id" placeholder="ID">
+                <input type="date" name="date" id="sp_date">
+              </div>
+              <div class="for26">
+                <input type="date" name="registration" id="sp_purchasedata" placeholder="Purchase Data">
+                <input type="text" name="code" id="sp_code" placeholder="Code">
+                <input type="text" name="company" id="sp_company" placeholder="Company">
+                <input type="text" name="address" id="sp_address" placeholder="Address">
+              </div>
+              <div class="for27">
+                <input type="tel" name="phone" id="sp_phone" placeholder="Phone">
+                <input type="tel" name="cellphone" id="sp_cellphone" placeholder="Cellphone">
+                <input type="text" name="email" id="sp_email" placeholder="E-mail">
+                <input type="text" name="website" id="sp_website" placeholder="Website">
+              </div>
+              <div class="for28">
+                <select name="sp_type" id="sp_type">
+                  <option value="">type machinery</option>
+                </select>
+                <select name="sp_classification" id="sp_classification">
+                  <option value="">Classification</option>
+                </select>
+                <select name="sp_financing" id="sp_financing">
+                  <option value="">Financing</option>
+                </select>
+                <select name="sp_credit" id="sp_credit">
+                  <option value="">Credit</option>
+                </select> 
+              </div>
+              <div class="for29">
+                <input type="text" name="sp_contact" id="sp_contact" placeholder="Contact">
+                <input type="text" name="sp_observation" id="sp_observation" placeholder="Observation">
+              </div>
+              <div class="for30">
+                <button type="submit">Save</button>
+                <button type="reset">Reset</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="Listamos" class="ctd4">
+          <div class="ttl2">
+            <h4>List of Inventory</h4>
+          </div>
+          <div class="tableform">
+            <table class="tbform">
+              <thead class="thform">
+                <tr class="trform">
+                  <th class="th1">Id</th>
+                  <th class="th1">Purchase</th>
+                  <th class="th1">code</th>
+                  <th class="th1">company</th>
+                  <th class="th1">Email</th>
+                  <th class="th1">Website</th>
+                  <th class="th1">Machinery</th>
+                  <th class="th1">Contact</th>
+                  <th class="th1">Cellphone</th>
+                </tr>
+              </thead>
+              <tbody class="tbd">
+                <!--aqui se añadira la informacion del formulario-->
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div id="Costo" class="ctd4">
+          <div class="pnlrent">
+            <div class="dvrent1">
+              <div class="formrent">
+                <div>
+                  <h4>Cost Invoice</h4>
+                  <hr>
+                </div>
+                <form action="" method="post">
+                  <div class="frent1">
+                    <input type="number" name="" id="id" placeholder="Id">
+                    <input type="date" name="" id="date">
+                  </div>
+                  <div class="frent2">
+                    <h3>Company data</h3>
+                    <select name="" id="m_company">
+                      <option value="">Select Company</option>
+                    </select>
+                    <input type="text" name="" id="m_email" placeholder="Email">
+                    <input type="text" name="" id="m_cellphone" placeholder="Cellphone">
+                  </div>
+                  <hr>
+                  <div class="frent3">
+                    <h3>Supplier data</h3>
+                    <select name="" id="sp_company">
+                      <option value="">Select Company</option>
+                    </select>
+                    <input type="text" name="" id="sp_email" placeholder="Email">
+                    <input type="text" name="" id="sp_phone" placeholder="Phone">
+                  </div>
+                  <hr>
+                  <div class="frent4">
+                    <select name="" id="make">
+                        <option value="">Make</option>
+                    </select>
+                    <select name="" id="model">
+                        <option value="">Model</option>
+                    </select>
+                    <select name="" id="year">
+                        <option value="">Year</option>
+                    </select>
+                    <select name="" id="fuel">
+                        <option value="">Fuel</option>
+                    </select>
+                  </div>
+                  <div class="frent5">
+                    <div class="frt1">
+                      <input type="number" name="" id="star" placeholder="US$ Cost">
+                      <input type="number" name="" id="final" placeholder="US$ Tax">
+                      <input type="number" name="" id="total" placeholder="US$ Commission">
+                      <input type="number" name="" id="cost" placeholder="US$ Documentation">
+                      <input type="number" name="" id="utility" placeholder="US$ Extra Cost">
+                      <input type="number" name="" id="total" placeholder="US$ Total to pay">
+                    </div>
+                    <div class="frt2">
+                      <button type="submit">Save</button>
+                      <button type="reset">Reset</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="dvrent2">
+              <div class="tablerent">
+                <div><h4>Registered Invoice</h4></div>
+              </div>
+                <style>
+                  table {
+                    width: 95%;
+                    border-collapse: collapse;
+                    margin-left: 15px;
+                    margin-top: 10px;
+                  }
+                  th, td {
+                    border: 1px solid #ddd;
+                    padding: 10px;
+                  }
+                  th {
+                    background-color: #f2f2f2;
+                  }
+                </style>
+               <table id="tabla">
+                  <thead>
+                    <tr>
+                      <th>Id</th>
+                      <th>Date</th>
+                      <th>Suppliers</th>
+                      <th>Email</th>
+                      <th>Phone</th>
+                      <th>Make</th>
+                      <th>Model</th>
+                      <th>Year</th>
+                      <th>U$ Total to Pay</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!--aqui se añadira la informacion del formulario-->
+                  </tbody>
+                </table>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Customers" class="tabcontent">
+        <h3>Customers</h3>
+        <br>
+        <div class="bloque5">
+          <button class="btnct" onclick="page5('Registare', 'event5')">Registry</button>
+          <button class="btnct" onclick="page5('Listo', 'event5')">List</button>
+          <button class="btnct" onclick="page5('Ingresos', 'event5')">Income</button>
+        </div>
+
+        <div id="Registare" class="ctd5">
+          <div class="ttle">
+            <h3>Registry New Customer</h3>
+          </div>
+          <div class="formulario6">
+            <form id="registrycustomer">
+              <div class="for31">
+                <input type="text" name="id" id="id" placeholder="ID">
+                <input type="date" name="c_date" id="c_date">
+              </div>
+              <div class="for32">
+                <input type="date" name="registration" id="c_purchase">
+                <input type="text" name="code" id="c_code" placeholder="Code">
+                <input type="text" name="name" id="c_name" placeholder="Name">
+                <input type="text" name="lastname" id="c_lastname" placeholder="Lastname">
+              </div>
+              <div class="for33">
+                <input type="text" name="email" id="c_email" placeholder="E-mail">
+                <input type="text" name="address" id="c_address" placeholder="Address">
+                <input type="text" name="cellphone" id="c_cellphone" placeholder="Cellphone">
+                <input type="text" name="c_company" id="c_company" placeholder="Company">
+              </div>
+              <div class="for34">
+                <select name="c_type" id="c_type">
+                  <option value="">Type</option>
+                </select>
+                <select name="classification" id="c_classification">
+                  <option value="">Classification</option>
+                </select>
+                <select name="c_credit" id="c_credit">
+                  <option value="">Credit</option>
+                </select>
+                <select name="c_duration" id="c_duration">
+                  <option value="">Duration</option>
+                </select>
+              </div>
+              <div class="for35">
+                <input type="text" name="" id="c_contact" placeholder="Contact">
+              </div>
+              <div class="for36">
+                <button type="submit">Save</button>
+                <button type="reset">Reset</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="Listo" class="ctd5">
+          <div class="ttl2">
+            <h4>List of Inventory</h4>
+          </div>
+          <div class="tableform">
+            <table class="tbform">
+              <thead class="thform">
+                <tr class="trform">
+                  <th class="th1">Id</th>
+                  <th class="th1">Date</th>
+                  <th class="th1">Code</th>
+                  <th class="th1">Name</th>
+                  <th class="th1">Lastname</th>
+                  <th class="th1">Email</th>
+                  <th class="th1">Cellpone</th>
+                  <th class="th1">Company</th>
+                  <th class="th1">Proyect name</th>
+                  <th class="th1">Classification</th>
+                </tr>
+              </thead>
+              <tbody class="tbd">
+                <!--aqui se añadira la informacion del formulario-->
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div id="Ingresos" class="ctd5">
+          <div class="pnlrent">
+            <div class="dvrent1">
+              <div class="formrent">
+                <div>
+                  <h4>Invoice Accounts Receivable</h4>
+                  <hr>
+                </div>
+                <form action="" method="post">
+                  <div class="frent1">
+                    <input type="number" name="" id="id" placeholder="Id">
+                    <input type="date" name="" id="date">
+                  </div>
+                  <div class="frent2">
+                    <h3>Company data</h3>
+                    <select name="" id="m_company">
+                      <option value="">Select Company</option>
+                    </select>
+                    <input type="text" name="" id="m_email" placeholder="E-mail">
+                    <input type="text" name="" id="m_cellphone" placeholder="Cellphone">
+                  </div>
+                  <hr>
+                  <div class="frent3">
+                    <h3>Customers data</h3>
+                    <select name="" id="c_company">
+                      <option value="">Select Company</option>
+                    </select>
+                    <input type="text" name="" id="c_email" placeholder="E-mail">
+                    <input type="text" name="" id="c_cellphone" placeholder="Cellphone">
+                  </div>
+                  <hr>
+                  <div class="frent4">
+                    <select name="" id="make">
+                        <option value="">Make</option>
+                    </select>
+                    <select name="" id="model">
+                        <option value="">Model</option>
+                    </select>
+                    <select name="" id="year">
+                        <option value="">Year</option>
+                    </select>
+                  </div>
+                  <div class="frent5">
+                    <div class="frt1">
+                      <input type="number" name="" id="star" placeholder="US$ Balance">
+                      <input type="number" name="" id="final" placeholder="US$ Tax">
+                      <input type="number" name="" id="total" placeholder="US$ Interest">
+                      <input type="number" name="" id="cost" placeholder="US$ Balance Difference">
+                      <input type="number" name="" id="utility" placeholder="US$ Credit">
+                      <input type="number" name="" id="total" placeholder="US$ Total">
+                    </div>
+                    <div class="frt2">
+                      <button type="submit">Save</button>
+                      <button type="reset">Reset</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="dvrent2">
+              <div class="tablerent">
+                <div><h4>Registered Invoice</h4></div>
+              </div>
+                <style>
+                  table {
+                    width: 95%;
+                    border-collapse: collapse;
+                    margin-left: 15px;
+                    margin-top: 10px;
+                  }
+                  th, td {
+                    border: 1px solid #ddd;
+                    padding: 10px;
+                  }
+                  th {
+                    background-color: #f2f2f2;
+                  }
+                </style>
+               <table id="tabla">
+                  <thead>
+                    <tr>
+                      <th>Id</th>
+                      <th>Date</th>
+                      <th>Customers</th>
+                      <th>Make</th>
+                      <th>Model</th>
+                      <th>Year</th>
+                      <th>Fuel</th>
+                      <th>U$ Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!--aqui se añadira la informacion del formulario-->
+                  </tbody>
+                </table>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>    
+</body>
+</html>
