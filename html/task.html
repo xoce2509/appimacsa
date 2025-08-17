@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario de Actividades</title>
+  <link rel="stylesheet" href="/assets/css/calendario.css" />
+  <link rel="stylesheet" href="/assets/css/registry.css">
+  <link rel="stylesheet" href="../css/registry.css" type="text/css">
+    <script src="../js/configuraciongeneral.js" type="text/javascript"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/assets/js/calendario.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="topnav">
+      <a href="../html/menu.html"><i class='bx bx-menu'></i></a>
+      <a href="../html/task.html"><i class='bx bx-task'></i></a>
+      <a href="../html/book.html"><i class='bx bx-book'></i></a>
+      <a href="../html/index.html"><i class='bx bx-log-out-circle'></i></a>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <h1>Calendario de Actividades</h1>
+      <div class="calendar-header">
+        <button id="prev">◀</button>
+        <h2 id="month-year"></h2>
+        <button id="next">▶</button>
+      </div>
+      <div class="calendar" id="calendar"></div>
+
+      <div class="legend">
+        <strong>Leyenda:</strong>
+        <span class="legend-box verde">Activo</span>
+        <span class="legend-box amarillo">Medio Tiempo</span>
+        <span class="legend-box rojo">Por Finalizar</span>
+      </div>
+    </div>
+
+    <!-- Modal para agregar evento -->
+    <div class="modal" id="eventModal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h3>Agendar Actividad</h3>
+        <form id="eventForm">
+          <label>Cliente:</label>
+          <input type="text" id="cliente" required />
+          <label>Equipo:</label>
+          <input type="text" id="equipo" required />
+          <label>Asunto:</label>
+          <input type="text" id="asunto" required />
+          <label>Hora Inicial:</label>
+          <input type="time" id="horaInicio" required />
+          <label>Hora Final:</label>
+          <input type="time" id="horaFin" required />
+          <input type="hidden" id="eventDate" />
+          <button type="submit">Guardar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal de vista de evento -->
+    <div class="modal" id="viewModal">
+      <div class="modal-content">
+        <span class="close" id="closeViewModal">&times;</span>
+        <h3>Detalle de Actividad</h3>
+        <div id="eventDetails"></div>
+        <div class="progress-container">
+          <div class="progress-bar" id="timeBar"></div>
+        </div>
+        <button id="markDone">Marcar como hecho</button>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
