@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta http-equiv="content-script-type" content="text/javascript">
+    <meta http-equiv="content-style-type" content="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/maintenance.css" type="text/css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="../js/maintenance.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Maintenance</title>
+</head>
+<body class="grid-container">
+  <header class="header">
+    <div class="topnav">
+      <a href="../html/menu.html"><i class='bx bx-menu'></i></a>
+      <a href="../html/task.html"><i class='bx bx-task'></i></a>
+      <a href="../html/book.html"><i class='bx bx-book'></i></a>
+      <a href="../html/index.html"><i class='bx bx-log-out-circle'></i></a>
+    </div>
+  </header>
+    <aside class="sidebar">
+        <div class="logo">
+          <h1>Imacsa</h1>
+        </div>
+        <br>
+        <button class="tablink" onclick="openPage('maintenanceequipment', this, '#facc00')"><i class="fas fa-hard-hat"></i>&nbsp;Equipment</button>
+        <button class="tablink" onclick="openPage('maintenancevehicle', this, '#facc00')"><i class="fas fa-truck"></i>&nbsp;Vehicle</button>
+        <button class="tablink" onclick="openPage('maintenancetool', this, '#facc00')"><i class="fas fa-tools"></i>&nbsp;Tool</button>
+    </aside>
+    <main class="main">
+      <div id="maintenanceequipment" class="tabcontent">
+        <div class="panelcentralA">
+          <div class="panelA1">
+            <div class="A11">
+              <div class="boxconfiguration">
+                <label for="select1">Code</label>
+                <select name="select1" id="select1">
+                  <!--Opciones se cargan dinámicamente-->
+                </select>
+                <label for="select2">Year</label>
+                <select name="select2" id="select2">
+                  <!--Opciones se cargan dinámicamente-->
+                </select>
+              </div>
+            </div>
+            <div class="A12">
+              <div class="boxconfiguration">
+                <label for="select3">Classification</label>
+                <select name="select3" id="select3">
+                  <!--Opciones se cargan dinámicamente-->
+                </select>
+                <label for="select4">Make</label>
+                <select name="select4" id="select4">
+                  <!--Opciones se cargan dinámicamente-->
+                </select>
+              </div>
+            </div>
+            <div class="A13">
+              <div class="bottonconfiguration">
+                <button>Search</button>
+                <button>Reset</button>
+                <button>Search Without Filter</button>
+              </div>
+            </div>
+          </div>
+          <div class="panelA2">
+            <div class="A21">
+              <div class="labelform">
+                <label class="tituloform">Heavy Equipment Log</label>
+              </div>
+              <table class="tableA21">
+                <thead class="theadA21">
+                  <tr class="trA">
+                    <th class="thA1">Code</th>
+                    <th class="thA2">Year</th>
+                    <th class="thA3">Classification</th>
+                    <th class="thA4">Make</th>
+                    <th class="thA5">Model</th>
+                    <th class="thA6">Horometer</th>
+                    <th class="thA7">Acction</th>
+                  </tr>
+                </thead>
+                <tbody class="tbodyA21">
+                  <!--informacion origen del formulario-->
+                </tbody>
+              </table>
+            </div>
+            <div class="A22">
+                  <div class="hq1">
+                    <label for="select5">Maintenance Equipment</label>
+                    <select name="select5" id="select5">
+                      <!--Opciones se cargan dinámicamente-->
+                    </select>
+                  </div>
+                  <div class="hq2">
+                    <label for="select6">Make</label>
+                    <select name="select6" id="select6">
+                      <!--Opciones se cargan dinámicamente-->
+                    </select>
+                    <label for="select7">Model</label>
+                    <select name="select7" id="select7">
+                      <!--Opciones se cargan dinámicamente-->
+                    </select>
+                  </div>
+                  <div class="hq3">
+                    <label for="select8">Year</label>
+                    <select name="select8" id="select8">
+                      <!--Opciones se cargan dinámicamente-->
+                    </select>
+                    <label for="select9">Fuel</label>
+                    <select name="select9" id="select9">
+                      <!--Opciones se cargan dinámincamente-->
+                    </select>
+                  </div>
+                  <br>
+                  <h5>Type of Maintenance</h5>
+                  <div class="hq4">
+                    <div class="checkbox-column">
+                      <label><input type="checkbox" name="option1">Oil Change</label>
+                      <label><input type="checkbox" name="option2">Preventive</label>
+                      <label><input type="checkbox" name="option3">Tire</label>
+                    </div>
+                    <div class="checkbox-column">
+                      <label><input type="checkbox" name="option4">Engine</label>
+                      <label><input type="checkbox" name="option5">Suspension</label>
+                      <label><input type="checkbox" name="option6">Other</label>
+                    </div>
+                  </div>
+                  <div class="hq5">
+                    <div class="txtcontainer">
+                      <label for="texttarea">Other details</label>
+                      <br>
+                      <textarea id="texttarea"></textarea>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="btprint">
+                    <button>Print Order</button>
+                    <button>Cancel Order</button>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="maintenancevehicle" class="tabcontent">
+        <div class="panelcentralB">
+          <div class="panelB1">
+            <div class="B11">
+              <div class="boxconfig">
+                <label for="select10">Code</label>
+                <select name="select10" id="select10">
+                  <!--Opciones se cargan dinámicamente-->
+                </select>
+                <label for="select11">Year</label>
+                <select name="select11" id="select11">
+                  <!--Opciones se cargan dinámicamente-->
+                </select>
+              </div>
+            </div>
+            <div class="B12">
+              <div class="boxconfig">
+                <label for="select12">Classification</label>
+                <select name="select12" id="select12">
+                  <!--Opciones se cargan dinámicamente-->
+                </select>
+                <label for="select13">Make</label>
+                <select name="select13" id="select13">
+                  <!--Opciones se cargan dinámicamente-->
+                </select>
+              </div>
+            </div>
+            <div class="B13">
+              <div class="bottonconfig">
+                <button>Search</button>
+                <button>Reset</button>
+                <button>Search Without Filter</button>
+              </div>
+            </div>
+          </div>
+          <div class="panelB2">
+            <div class="B21">
+              <label class="tituloform1">Fleet Vehicle Log</label>
+              <table class="tableB21">
+                <thead class="theadB21">
+                  <tr class="trB">
+                    <th class="thB1">Code</th>
+                    <th class="thB2">Year</th>
+                    <th class="thB3">Classification</th>
+                    <th class="thB4">Make</th>
+                    <th class="thB5">Model</th>
+                    <th class="thB6">Time</th>
+                    <th class="thB7">Acction</th>
+                  </tr>
+                </thead>
+                <tbody class="tbodyB21">
+                  <!--informacion origen del formulario-->
+                </tbody>
+              </table>
+            </div>
+            <div class="B22">
+              <div class="fv1">
+                <label for="select14">Maintenance Vehicle</label>
+                <select name="select14" id="select14">
+                  <!--Opciones se cargan dinámicamente-->
+                </select>
+              </div>
+              <div class="fv2">
+                <label for="select15">Make</label>
+                <select name="select15" id="select15">
+                  <!--Opciones se cargan dinámicamente-->
+                </select>
+                <label for="select16">Model</label>
+                <select name="select16" id="select16">
+                  <!--Opciones se cargan dinámicamente-->
+                </select>
+              </div>
+              <div class="fv3">
+                <label for="select17">Year</label>
+                <select name="select17" id="select17">
+                  <!--Opciones se cargan dinámicamente-->
+                </select>
+                <label for="select18">Fuel</label>
+                <select name="select18" id="select18"></select>
+              </div>
+              <br>
+              <h5>Type of Maintenance</h5>
+              <div class="fv4">
+                <div class="checkbox-block">
+                  <label><input type="checkbox" name="option7">Oil Change</label>
+                  <label><input type="checkbox" name="option8">Preventive</label>
+                  <label><input type="checkbox" name="option9">Tire</label>
+                </div>
+                <div class="checkbox-block">
+                  <label><input type="checkbox" name="option10">Engine</label>
+                  <label><input type="checkbox" name="option11">Suspension</label>
+                  <label><input type="checkbox" name="option12">Other</label>
+                </div>
+              </div>
+              <div class="fv5">
+                <div class="txtcontent">
+                  <label for="textarea">Other details</label>
+                  <br>
+                  <textarea id="textarea"></textarea>
+                </div>
+              </div>
+              <br>
+              <div class="btprint1">
+                <button>Print Order</button>
+                <button>Cancel Order</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="maintenancetool" class="tabcontent">
+        <div class="panelcentralC">
+          <div class="panelC1">
+            <div class="C11">
+              <div class="config">
+                <label for="select19">Code</label>
+                <select name="select19" id="select19">
+                  <!--Opciones se cargan dinámicamente-->
+                </select>
+                <label for="select20">Year</label>
+                <select name="select20" id="select20">
+                  <!--Opciones se cargan dinámicamente-->
+                </select>
+              </div>
+            </div>
+            <div class="C12">
+              <div class="config">
+                <label for="select21">Classification</label>
+                <select name="select21" id="select21">
+                  <!--Opciones se cargan dinámicamente-->
+                </select>
+                <label for="select22">Make</label>
+                <select name="select22" id="select22">
+                  <!--Opciones se cargan dinámicamente-->
+                </select>
+              </div>
+            </div>
+            <div class="C13">
+              <div class="config">
+                <button>Search</button>
+                <button>Reset</button>
+                <button>Search Without Filter</button>
+              </div>
+            </div>
+          </div>
+          <div class="panelC2">
+            <div class="C21">
+              <div class="labeltool">
+                <label for="titletool">
+                  Tools and Small Tools Log
+                </label>
+              </div>
+              <table class="tableC21">
+                <thead class="theadC21">
+                  <tr class="trC">
+                    <th class="thC1">Code</th>
+                    <th class="thC2">Year</th>
+                    <th class="thC3">Classification</th>
+                    <th class="thC4">Make</th>
+                    <th class="thC5">Model</th>
+                    <th class="thC6">Rent</th>
+                    <th class="thC7">Acction</th>
+                  </tr>
+                </thead>
+                <tbody class="tbodyC21">
+                  <!--informacion origen del formulario-->
+                </tbody>
+              </table>
+            </div>
+            <div class="C22">
+              <div class="tl1">
+                <label for="select23">Maintenance Tools</label>
+                <select name="select23" id="select23">
+                  <!--Opciones se cargan dinámicamente-->
+                </select>
+              </div>
+              <div class="tl2">
+                <label for="select24">Make</label>
+                <select name="select24" id="select24">
+                  <!--Opcones se cargan dinámicamente-->
+                </select>
+                <label for="select25">Model</label>
+                <select name="select25" id="select25">
+                  <!--Opciones se cargan dinámicamente-->
+                </select>
+              </div>
+              <div class="tl3">
+                <label for="select26">Year</label>
+                <select name="select26" id="select26">
+                  <!--Opciones se cargan dinámicamente-->
+                </select>
+                <label for="select27">Series</label>
+                <select name="select27" id="select27">
+                  <!--Opciones se cargan dinámicamente-->
+                </select>
+              </div>
+              <br>
+              <h5>Type of Maintenance</h5>
+              <div class="tl4">
+                <div class="bloque">
+                  <label><input type="checkbox" name="option13">Corrective</label>
+                  <label><input type="checkbox" name="option14">Preventive</label>
+                  <label><input type="checkbox" name="option15">Electronic</label>
+                </div>
+                <div class="bloque">
+                  <label><input type="checkbox" name="option16">Mechanical</label>
+                  <label><input type="checkbox" name="option17">Modifications</label>
+                  <label><input type="checkbox" name="option18">Revaluation</label>
+                </div>
+              </div>
+              <div class="tl5">
+                <div class="tareacontenido">
+                  <label for="ttarea">Other details</label>
+                  <br>
+                  <textarea id="ttarea"></textarea>
+                </div>
+              </div>
+              <br>
+              <div class="btprint3">
+                <button>Print Order</button>
+                <button>Cancel Order</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>    
+</body>
+</html>
