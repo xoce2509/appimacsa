@@ -102,7 +102,7 @@ body {
     background: #fdcb3f;
 }
 
-/* Responsive Design */
+/* Responsive Design 900px */
 @media (max-width: 500px) {
     #login-1 {
         width: 95vw;
@@ -122,5 +122,23 @@ body {
     }
 
 }
+/* Responsive Design 600px */
+@media (max-width: 500px) {
+    #login-1 {
+        width: 95vw;
+        padding: 20px 10px;
+    }
+    #login-1 h1 {
+        font-size: 28px;
+    }
+    .input-user,
+    .input-password {
+        margin: 20px 0;
+        height: 35px;
+    }
+    #btn-login {
+        height: 30px;
+        font-size: 14px;
+    }
 
-
+}
