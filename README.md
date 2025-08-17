@@ -1,5 +1,5 @@
 # appimacsa
-Sistema modular para gestión empresaril, parte del framework FSX.
+Sistema modular para gestión empresarial, parte del framework FSX.
 
 ## Estructura
 - `css/`: estilos visuales
