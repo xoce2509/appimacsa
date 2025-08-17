@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta http-equiv="content-script-type" content="text/javascript">
+    <meta http-equiv="content-style-type" content="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontend/css/book.css" type="text/css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' type="text/css">
+    <script src="/frontend/js/configuraciongeneral.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Global logbook</title>
+</head>
+<body class="grid-container">
+    <header class="header">
+      <div class="topnav">
+        <a href="../html/menu.html"><i class='bx bx-menu'></i></a>
+        <a href="/frontend/html/task.html"><i class='bx bx-task'></i></a>
+        <a href="../index.html"><i class='bx bx-log-out-circle'></i></a>
+      </div>
+    </header>
+    <nav class="navbar">
+    </nav>
+    <aside class="sidebar">
+        <div class="logo">
+          <h1>Imacsa</h1>
+        </div>
+        <br>
+        <button class="tablink" onclick="openPage('Bookequipment', this, '#facc00')"><i class='bx bx-shape-circle'></i>&nbsp;Equipment</button>
+        <button class="tablink" onclick="openPage('Bookvehicles', this, '#facc00')"><i class='bx bx-shape-circle'></i>&nbsp;Vehicles</button>
+        <button class="tablink" onclick="openPage('Booktools', this, '#facc00')"><i class='bx bx-shape-circle'></i>&nbsp;Tools</button>
+
+    </aside>
+    <main class="main">
+      <div id="Bookequipment" class="tabcontent">
+        <div class="panelcentralA">
+          <div class="panelA2">
+            <div class="A21">
+              <h3>Transaction Record</h3>
+              <table class="tableA21">
+                <thead class="theadA21">
+                  <tr class="trA">
+                    <th class="thA1">Id</th>
+                    <th class="thA2">Date</th>
+                    <th class="thA3">Classification</th>
+                    <th class="thA4">Year</th>
+                    <th class="thA5">Make</th>
+                    <th class="thA6">Model</th>
+                    <th class="thA7">Horometer</th>
+                    <th class="thA8">U$ Cost</th>
+                    <th class="thA9">U$ Utility</th>
+                    <th class="thA10">U$ Total</th>
+                  </tr>
+                </thead>
+                <tbody class="tbodyA21">
+                  <!--informacion origen del formulario-->
+                </tbody>
+              </table>
+            </div>
+            <div class="A22">
+              <div class="btnfuntion">
+                <button>Print</button>
+                <button>View</button>
+                <button>Export</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Bookvehicles" class="tabcontent">
+        <div class="panelcentralA">
+          <div class="panelA2">
+            <div class="A21">
+              <h3>Transaction Record</h3>
+              <table class="tableA21">
+                <thead class="theadA21">
+                  <tr class="trA">
+                    <th class="thA1">Id</th>
+                    <th class="thA2">Date</th>
+                    <th class="thA3">Classification</th>
+                    <th class="thA4">Year</th>
+                    <th class="thA5">Make</th>
+                    <th class="thA6">Model</th>
+                    <th class="thA7">Rent</th>
+                    <th class="thA8">U$ Cost</th>
+                    <th class="thA9">U$ Utility</th>
+                    <th class="thA10">U$ Total</th>
+                  </tr>
+                </thead>
+                <tbody class="tbodyA21">
+                  <!--informacion origen del formulario-->
+                </tbody>
+              </table>
+            </div>
+            <div class="A22">
+              <div class="btnfuntion">
+                <button>Print</button>
+                <button>View</button>
+                <button>Export</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Booktools" class="tabcontent">
+        <div class="panelcentralA">
+          <div class="panelA2">
+            <div class="A21">
+              <h3>Transaction Record</h3>
+              <table class="tableA21">
+                <thead class="theadA21">
+                  <tr class="trA">
+                    <th class="thA1">Id</th>
+                    <th class="thA2">Date</th>
+                    <th class="thA3">Classification</th>
+                    <th class="thA4">Year</th>
+                    <th class="thA5">Make</th>
+                    <th class="thA6">Model</th>
+                    <th class="thA7">Rent</th>
+                    <th class="thA8">U$ Cost</th>
+                    <th class="thA9">U$ Utility</th>
+                    <th class="thA10">U$ Total</th>
+                  </tr>
+                </thead>
+                <tbody class="tbodyA21">
+                  <!--informacion origen del formulario-->
+                </tbody>
+              </table>
+            </div>
+            <div class="A22">
+              <div class="btnfuntion">
+                <button>Print</button>
+                <button>View</button>
+                <button>Export</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>    
+</body>
+</html>
