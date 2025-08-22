@@ -17,7 +17,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(img/menu.jpg) no-repeat center center fixed;
+    background: url(../img/index.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -142,4 +142,5 @@ body {
     }
 
 }
+
 
